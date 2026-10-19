@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bardesa: a software company</title>
+  <meta name="description" content="Bardesa is a software company. We design, build and run our own products, from consumer apps to tools for businesses. Wendevo is the first.">
+  <link rel="canonical" href="https://bardesa.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F4F5F1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bardesa">
+  <meta property="og:title" content="Bardesa: a software company">
+  <meta property="og:description" content="We design, build and run our own software products. Wendevo is the first.">
+  <meta property="og:url" content="https://bardesa.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bardesa Limited",
+    "url": "https://bardesa.com",
+    "email": "hello@bardesa.com",
+    "identifier": { "@type": "PropertyValue", "propertyID": "CAC RC", "value": "9922778" },
+    "brand": [{ "@type": "Brand", "name": "Wendevo", "url": "https://wendevo.com" }]
+  }
+  </script>
+
+  <style>
+    :root {
+      --paper: #F4F5F1;
+      --ink: #15201C;
+      --muted: #5B6661;
+      --line: #D9DDD6;
+      --link: #1F5A4B;
+
+      --forest: #173B32;
+      --forest-deep: #102B24;
+      --on-forest: #E9F0EB;
+      --on-forest-muted: #A9BDB3;
+      --sage: #B9D8C4;
+
+      --display: "Unbounded", "Arial Black", sans-serif;
+      --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+      --gutter: clamp(1rem, 4vw, 3rem);
+      --max: 72rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #0D1412;
+        --ink: #E6ECE8;
+        --muted: #9DABA5;
+        --line: #24302C;
+        --link: #9FD0BB;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+    }
+
+    a { color: var(--link); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 3px; }
+
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .skip { position: absolute; left: var(--gutter); top: -3rem; background: var(--ink); color: var(--paper); padding: 0.5rem 0.75rem; z-index: 10; }
+    .skip:focus { top: 0.75rem; }
+
+    /* Header */
+    .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .wordmark {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: var(--display); font-weight: 600; font-size: 1.3rem; letter-spacing: -0.02em;
+      color: var(--ink); text-decoration: none;
+    }
+    .wordmark svg { width: 1.75rem; height: 1.75rem; flex: none; color: var(--forest); }
+    @media (prefers-color-scheme: dark) { .wordmark svg { color: var(--sage); } }
+    .site-header nav ul { list-style: none; display: flex; gap: clamp(0.9rem, 3vw, 2rem); margin: 0; padding: 0; }
+    .site-header nav a { color: var(--ink); text-decoration: none; font-weight: 500; }
+    .site-header nav a:hover { text-decoration: underline; }
+
+    /* Opening */
+    .intro { padding-top: clamp(3rem, 10vw, 7rem); padding-bottom: clamp(3rem, 8vw, 5.5rem); }
+    .intro h1 {
+      font-family: var(--display); font-weight: 500;
+      font-size: clamp(2.1rem, 6vw, 4.4rem); line-height: 1.07; letter-spacing: -0.03em;
+      margin: 0; max-width: 17ch;
+    }
+    .intro p { margin: 1.75rem 0 0; max-width: 38rem; font-size: 1.1875rem; color: var(--muted); }
+
+    /* What we do */
+    .approach .wrap { padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+    .approach-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem);
+      border-top: 1px solid var(--line); padding-top: 2rem;
+    }
+    .approach h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 0.6rem; line-height: 1.35; }
+    .approach p { margin: 0; color: var(--muted); }
+
+    /* Products: the dark band */
+    .products { background: var(--forest); color: var(--on-forest); }
+    .products .wrap { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+    .products-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 2rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+    .products-head h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; margin: 0; }
+    .products-head p { margin: 0; color: var(--on-forest-muted); }
+
+    .product {
+      display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      column-gap: clamp(1.5rem, 5vw, 5rem); row-gap: 1.5rem; align-items: start;
+      padding-top: 2rem; border-top: 1px solid rgba(233, 240, 235, 0.22);
+    }
+    .product-name {
+      grid-column: 1 / -1; margin: 0 0 clamp(0.25rem, 1.5vw, 1rem);
+      font-family: var(--display); font-weight: 600;
+      font-size: clamp(2.75rem, 10.5vw, 8.5rem); line-height: 0.92; letter-spacing: -0.045em;
+      overflow-wrap: anywhere;
+    }
+    .product-meta { margin: 0; }
+    .product-meta dt { color: var(--on-forest-muted); font-size: 0.95rem; }
+    .product-meta dd { margin: 0 0 1rem; font-weight: 600; }
+    .product-body p { margin: 0 0 1rem; max-width: 36rem; }
+    .product-body ul { margin: 0 0 1.75rem; padding-left: 1.15rem; max-width: 36rem; }
+    .product-body li { margin-bottom: 0.35rem; }
+    .product-body li::marker { color: var(--sage); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .button {
+      display: inline-flex; align-items: center; min-height: 2.875rem; padding: 0 1.25rem; border-radius: 999px;
+      font-weight: 600; text-decoration: none; color: var(--on-forest); border: 1.5px solid rgba(233, 240, 235, 0.55);
+    }
+    .button.primary { background: var(--sage); border-color: var(--sage); color: var(--forest-deep); }
+    .button:hover { text-decoration: underline; }
+    .products :focus-visible { outline-color: var(--sage); }
+
+    .next {
+      margin-top: clamp(2.5rem, 6vw, 4rem); padding: 1.5rem 0 0; border-top: 1px solid rgba(233, 240, 235, 0.22);
+      display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); column-gap: clamp(1.5rem, 5vw, 5rem);
+    }
+    .next h3 { margin: 0 0 0.5rem; font-size: 1.15rem; font-weight: 600; }
+    .next p { margin: 0; color: var(--on-forest-muted); max-width: 36rem; }
+
+    /* Company and contact */
+    .facts .wrap {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 5rem);
+      padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(3.5rem, 8vw, 6rem);
+    }
+    .facts h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; margin: 0 0 1.25rem; line-height: 1.15; }
+    .facts p { margin: 0 0 1rem; max-width: 34rem; }
+    .facts dl { margin: 1.5rem 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.6rem 1.5rem; }
+    .facts dt { color: var(--muted); }
+    .facts dd { margin: 0; font-weight: 500; }
+
+    .contact-list { list-style: none; margin: 0; padding: 0; }
+    .contact-list li { padding: 0.9rem 0; border-top: 1px solid var(--line); }
+    .contact-list li:last-child { border-bottom: 1px solid var(--line); }
+    .contact-list span { display: block; color: var(--muted); font-size: 0.95rem; }
+    .contact-list a { font-weight: 600; font-size: 1.1rem; }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid var(--line); }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 2rem; padding-top: 1.75rem; padding-bottom: 2.25rem; color: var(--muted); font-size: 0.95rem; }
+    .site-footer p { margin: 0; max-width: 40rem; }
+
+    @media (max-width: 760px) {
+      .approach-grid, .product, .next, .facts .wrap { grid-template-columns: minmax(0, 1fr); }
+      .next { row-gap: 0.5rem; }
+      .site-header nav { display: none; }
+      .facts dl { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
+      .facts dd { margin-bottom: 0.75rem; }
+    }
+
+    /* One moment of motion: the product name settles in. */
+    @media (prefers-reduced-motion: no-preference) {
+      .product-name { animation: settle 800ms cubic-bezier(.2,.7,.2,1) 120ms both; }
+      @keyframes settle { from { opacity: 0; transform: translateY(0.15em); } to { opacity: 1; transform: none; } }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="Bardesa, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="3" y="2" width="6.5" height="28" rx="3.25" fill="currentColor"/>
+          <circle cx="19.5" cy="20" r="7.25" fill="none" stroke="currentColor" stroke-width="6.5"/>
+        </svg>
+        bardesa
+      </a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#company">Company</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="wrap">
+        <h1 id="intro-title">We build software people come back to.</h1>
+        <p>Bardesa is a software company. We design, build and run our own products, from apps people use every day to the tools businesses run on behind them.</p>
+      </div>
+    </section>
+
+    <section class="approach" aria-label="How we work">
+      <div class="wrap">
+        <div class="approach-grid">
+          <div>
+            <h2>We own the whole product</h2>
+            <p>Design, engineering, payments, support and operations sit with one team, so nothing gets lost between handoffs.</p>
+          </div>
+          <div>
+            <h2>We build for trust first</h2>
+            <p>Identity checks, careful handling of money and clear privacy choices are part of the first version, not added later.</p>
+          </div>
+          <div>
+            <h2>We start where we live</h2>
+            <p>Each product launches in a market we know well, earns its place there, then grows to the next one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products" aria-labelledby="products-title">
+      <div class="wrap">
+        <div class="products-head">
+          <h2 id="products-title">Products</h2>
+          <p>What we've built so far</p>
+        </div>
+
+        <article class="product" aria-labelledby="wendevo-title">
+          <h3 class="product-name" id="wendevo-title">Wendevo</h3>
+
+          <dl class="product-meta">
+            <dt>What it is</dt>
+            <dd>A social app for real-world plans</dd>
+            <dt>Who it's for</dt>
+            <dd>People looking for things to do and people to do them with, and the organizers who host them</dd>
+            <dt>Where</dt>
+            <dd>Launching in Lagos in October 2026 on iPhone, Android and the web</dd>
+          </dl>
+
+          <div class="product-body">
+            <p>Wendevo helps people find events, communities and others who share their interests, then make plans to meet in person.</p>
+            <ul>
+              <li>Discover what's on and buy tickets in a few taps.</li>
+              <li>See who else is going and meet verified people before the day.</li>
+              <li>Organizers sell tickets, check guests in and get paid in one place.</li>
+            </ul>
+            <div class="actions">
+              <a class="button primary" href="https://wendevo.com">Visit wendevo.com</a>
+              <a class="button" href="https://business.wendevo.com">Wendevo for organizers</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="next">
+          <h3>What's next</h3>
+          <p>We're working on more products. If you'd like to partner with us or hear when they launch, email <a href="mailto:hello@bardesa.com" style="color: var(--sage)">hello@bardesa.com</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts" aria-label="Company and contact">
+      <div class="wrap">
+        <div id="company">
+          <h2>The company</h2>
+          <p>Bardesa Limited is a private software company. It owns and operates Wendevo and the products that follow it.</p>
+          <dl>
+            <dt>Legal name</dt>
+            <dd>Bardesa Limited</dd>
+            <dt>Registered in</dt>
+            <dd>Nigeria, with the Corporate Affairs Commission</dd>
+            <dt>RC number</dt>
+            <dd>9922778</dd>
+          </dl>
+        </div>
+
+        <div id="contact">
+          <h2>Get in touch</h2>
+          <ul class="contact-list">
+            <li>
+              <span>Partnerships, press and anything about Bardesa</span>
+              <a href="mailto:hello@bardesa.com">hello@bardesa.com</a>
+            </li>
+            <li>
+              <span>Help with Wendevo, tickets or your account</span>
+              <a href="mailto:support@wendevo.com">support@wendevo.com</a>
+            </li>
+            <li>
+              <span>Hosting events on Wendevo</span>
+              <a href="mailto:organizers@wendevo.com">organizers@wendevo.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year">2026</span> Bardesa Limited. RC 9922778.</p>
+      <p>This site uses no cookies or tracking. Each product's privacy policy and terms are on its own website, for example <a href="https://wendevo.com/legal/privacy">Wendevo's privacy policy</a>.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+</body>
+</html>
